@@ -1,3 +1,6 @@
+## v0.2.2
+- update README
+
 ## v0.2.1
 - prefixing all repos with elasticsearch for easy sorting
 

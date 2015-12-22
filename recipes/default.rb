@@ -14,33 +14,35 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-yum_repository 'elasticsearch' do
-  description node['yum']['elasticsearch']['description'] unless node['yum']['elasticsearch']['description'].nil?
-  baseurl node['yum']['elasticsearch']['baseurl'] unless node['yum']['elasticsearch']['baseurl'].nil?
-  mirrorlist node['yum']['elasticsearch']['mirrorlist'] unless node['yum']['elasticsearch']['mirrorlist'].nil?
-  gpgcheck node['yum']['elasticsearch']['gpgcheck'] unless node['yum']['elasticsearch']['gpgcheck'].nil?
-  gpgkey node['yum']['elasticsearch']['gpgkey'] unless node['yum']['elasticsearch']['gpgkey'].nil?
-  enabled node['yum']['elasticsearch']['enabled'] unless node['yum']['elasticsearch']['enabled'].nil?
-  cost node['yum']['elasticsearch']['cost'] unless node['yum']['elasticsearch']['cost'].nil?
-  exclude node['yum']['elasticsearch']['exclude'] unless node['yum']['elasticsearch']['exclude'].nil?
-  enablegroups node['yum']['elasticsearch']['enablegroups'] unless node['yum']['elasticsearch']['enablegroups'].nil?
-  failovermethod node['yum']['elasticsearch']['failovermethod'] unless node['yum']['elasticsearch']['failovermethod'].nil?
-  http_caching node['yum']['elasticsearch']['http_caching'] unless node['yum']['elasticsearch']['http_caching'].nil?
-  include_config node['yum']['elasticsearch']['include_config'] unless node['yum']['elasticsearch']['include_config'].nil?
-  includepkgs node['yum']['elasticsearch']['includepkgs'] unless node['yum']['elasticsearch']['includepkgs'].nil?
-  keepalive node['yum']['elasticsearch']['keepalive'] unless node['yum']['elasticsearch']['keepalive'].nil?
-  max_retries node['yum']['elasticsearch']['max_retries'] unless node['yum']['elasticsearch']['max_retries'].nil?
-  metadata_expire node['yum']['elasticsearch']['metadata_expire'] unless node['yum']['elasticsearch']['metadata_expire'].nil?
-  mirror_expire node['yum']['elasticsearch']['mirror_expire'] unless node['yum']['elasticsearch']['mirror_expire'].nil?
-  priority node['yum']['elasticsearch']['priority'] unless node['yum']['elasticsearch']['priority'].nil?
-  proxy node['yum']['elasticsearch']['proxy'] unless node['yum']['elasticsearch']['proxy'].nil?
-  proxy_username node['yum']['elasticsearch']['proxy_username'] unless node['yum']['elasticsearch']['proxy_username'].nil?
-  proxy_password node['yum']['elasticsearch']['proxy_password'] unless node['yum']['elasticsearch']['proxy_password'].nil?
-  repositoryid node['yum']['elasticsearch']['repositoryid'] unless node['yum']['elasticsearch']['repositoryid'].nil?
-  sslcacert node['yum']['elasticsearch']['sslcacert'] unless node['yum']['elasticsearch']['sslcacert'].nil?
-  sslclientcert node['yum']['elasticsearch']['sslclientcert'] unless node['yum']['elasticsearch']['sslclientcert'].nil?
-  sslclientkey node['yum']['elasticsearch']['sslclientkey'] unless node['yum']['elasticsearch']['sslclientkey'].nil?
-  sslverify node['yum']['elasticsearch']['sslverify'] unless node['yum']['elasticsearch']['sslverify'].nil?
-  timeout node['yum']['elasticsearch']['timeout'] unless node['yum']['elasticsearch']['timeout'].nil?
-  action :create
+%w(elasticsearch beats logstash curator).each do |repo|
+  yum_repository repo do
+    description node['yum']['elasticsearch'][repo]['description'] unless node['yum']['elasticsearch'][repo]['description'].nil?
+    baseurl node['yum']['elasticsearch'][repo]['baseurl'] unless node['yum']['elasticsearch'][repo]['baseurl'].nil?
+    mirrorlist node['yum']['elasticsearch'][repo]['mirrorlist'] unless node['yum']['elasticsearch'][repo]['mirrorlist'].nil?
+    gpgcheck node['yum']['elasticsearch'][repo]['gpgcheck'] unless node['yum']['elasticsearch'][repo]['gpgcheck'].nil?
+    gpgkey node['yum']['elasticsearch'][repo]['gpgkey'] unless node['yum']['elasticsearch'][repo]['gpgkey'].nil?
+    enabled node['yum']['elasticsearch'][repo]['enabled'] unless node['yum']['elasticsearch'][repo]['enabled'].nil?
+    cost node['yum']['elasticsearch'][repo]['cost'] unless node['yum']['elasticsearch'][repo]['cost'].nil?
+    exclude node['yum']['elasticsearch'][repo]['exclude'] unless node['yum']['elasticsearch'][repo]['exclude'].nil?
+    enablegroups node['yum']['elasticsearch'][repo]['enablegroups'] unless node['yum']['elasticsearch'][repo]['enablegroups'].nil?
+    failovermethod node['yum']['elasticsearch'][repo]['failovermethod'] unless node['yum']['elasticsearch'][repo]['failovermethod'].nil?
+    http_caching node['yum']['elasticsearch'][repo]['http_caching'] unless node['yum']['elasticsearch'][repo]['http_caching'].nil?
+    include_config node['yum']['elasticsearch'][repo]['include_config'] unless node['yum']['elasticsearch'][repo]['include_config'].nil?
+    includepkgs node['yum']['elasticsearch'][repo]['includepkgs'] unless node['yum']['elasticsearch'][repo]['includepkgs'].nil?
+    keepalive node['yum']['elasticsearch'][repo]['keepalive'] unless node['yum']['elasticsearch'][repo]['keepalive'].nil?
+    max_retries node['yum']['elasticsearch'][repo]['max_retries'] unless node['yum']['elasticsearch'][repo]['max_retries'].nil?
+    metadata_expire node['yum']['elasticsearch'][repo]['metadata_expire'] unless node['yum']['elasticsearch'][repo]['metadata_expire'].nil?
+    mirror_expire node['yum']['elasticsearch'][repo]['mirror_expire'] unless node['yum']['elasticsearch'][repo]['mirror_expire'].nil?
+    priority node['yum']['elasticsearch'][repo]['priority'] unless node['yum']['elasticsearch'][repo]['priority'].nil?
+    proxy node['yum']['elasticsearch'][repo]['proxy'] unless node['yum']['elasticsearch'][repo]['proxy'].nil?
+    proxy_username node['yum']['elasticsearch'][repo]['proxy_username'] unless node['yum']['elasticsearch'][repo]['proxy_username'].nil?
+    proxy_password node['yum']['elasticsearch'][repo]['proxy_password'] unless node['yum']['elasticsearch'][repo]['proxy_password'].nil?
+    repositoryid node['yum']['elasticsearch'][repo]['repositoryid'] unless node['yum']['elasticsearch'][repo]['repositoryid'].nil?
+    sslcacert node['yum']['elasticsearch'][repo]['sslcacert'] unless node['yum']['elasticsearch'][repo]['sslcacert'].nil?
+    sslclientcert node['yum']['elasticsearch'][repo]['sslclientcert'] unless node['yum']['elasticsearch'][repo]['sslclientcert'].nil?
+    sslclientkey node['yum']['elasticsearch'][repo]['sslclientkey'] unless node['yum']['elasticsearch'][repo]['sslclientkey'].nil?
+    sslverify node['yum']['elasticsearch'][repo]['sslverify'] unless node['yum']['elasticsearch'][repo]['sslverify'].nil?
+    timeout node['yum']['elasticsearch'][repo]['timeout'] unless node['yum']['elasticsearch'][repo]['timeout'].nil?
+    action :create
+  end
 end

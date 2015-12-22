@@ -8,16 +8,16 @@ describe 'yum-elasticsearch::default' do
       expect(chef_run).to create_yum_repository('elasticsearch')
     end
 
-    it 'creates yum_repository[beats]' do
-      expect(chef_run).to create_yum_repository('beats')
+    it 'creates yum_repository[elasticsearch-beats]' do
+      expect(chef_run).to create_yum_repository('elasticsearch-beats')
     end
 
-    it 'creates yum_repository[logstash]' do
-      expect(chef_run).to create_yum_repository('logstash')
+    it 'creates yum_repository[elasticsearch-logstash]' do
+      expect(chef_run).to create_yum_repository('elasticsearch-logstash')
     end
 
-    it 'creates yum_repository[curator]' do
-      expect(chef_run).to create_yum_repository('curator')
+    it 'creates yum_repository[elasticsearch-curator]' do
+      expect(chef_run).to create_yum_repository('elasticsearch-curator')
     end
   end
 end

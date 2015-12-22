@@ -11,35 +11,35 @@ describe 'yum elasticsearch repo' do
   end
 end
 
-describe 'yum beats repo' do
-  describe yumrepo('beats') do
+describe 'yum elasticsearch-beats repo' do
+  describe yumrepo('elasticsearch-beats') do
     it { should exist }
     it { should be_enabled }
   end
 
-  describe file('/etc/yum.repos.d/beats.repo') do
+  describe file('/etc/yum.repos.d/elasticsearch-beats.repo') do
     it { should contain 'packages.elastic.co' }
   end
 end
 
-describe 'yum logstash repo' do
-  describe yumrepo('logstash') do
+describe 'yum elasticsearch-logstash repo' do
+  describe yumrepo('elasticsearch-logstash') do
     it { should exist }
     it { should be_enabled }
   end
 
-  describe file('/etc/yum.repos.d/logstash.repo') do
+  describe file('/etc/yum.repos.d/elasticsearch-logstash.repo') do
     it { should contain 'packages.elastic.co' }
   end
 end
 
-describe 'yum curator repo' do
-  describe yumrepo('curator') do
+describe 'yum elasticsearch-curator repo' do
+  describe yumrepo('elasticsearch-curator') do
     it { should exist }
     it { should be_enabled }
   end
 
-  describe file('/etc/yum.repos.d/curator.repo') do
+  describe file('/etc/yum.repos.d/elasticsearch-curator.repo') do
     it { should contain 'packages.elastic.co' }
   end
 end

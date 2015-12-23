@@ -1,3 +1,8 @@
+## v0.2.3
+- easier management of yum resource
+- add managed attrib
+- update README
+
 ## v0.2.2
 - update README
 

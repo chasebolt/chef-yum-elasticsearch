@@ -2,7 +2,7 @@ name 'yum-elasticsearch'
 maintainer 'Chase Bolt'
 maintainer_email 'chase.bolt@gmail.com'
 license 'Apache 2.0'
-description 'Installs and configures the Duo Security yum repository'
+description 'Installs and configures the Elasticsearch yum repository'
 version '0.2.3'
 
 source_url 'https://github.com/chasebolt/yum-elasticsearch'

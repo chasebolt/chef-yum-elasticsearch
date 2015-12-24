@@ -1,3 +1,6 @@
+## v0.2.4
+- update metadata description
+
 ## v0.2.3
 - easier management of yum resource
 - add managed attrib

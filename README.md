@@ -1,5 +1,5 @@
 # yum-elasticsearch Cookbook
-[![Build Status](https://travis-ci.org/chasebolt/yum-elasticsearch.svg?branch=master)](http://travis-ci.org/chasebolt/yum-elasticsearch) [![Cookbook Version](https://img.shields.io/cookbook/v/yum-elasticsearch.svg)](https://supermarket.chef.io/cookbooks/yum-elasticsearch)
+[![Build Status](https://travis-ci.org/chasebolt/chef-yum-elasticsearch.svg?branch=master)](http://travis-ci.org/chasebolt/chef-yum-elasticsearch) [![Cookbook Version](https://img.shields.io/cookbook/v/yum-elasticsearch.svg)](https://supermarket.chef.io/cookbooks/yum-elasticsearch)
 
 The yum-elasticsearch cookbook takes over management of the default repositoryids used with the official elasticsearch repositories. It allows attribute manipulation of the `elasticsearch` yum channel.
 

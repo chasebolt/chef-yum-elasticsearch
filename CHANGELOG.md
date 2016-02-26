@@ -1,3 +1,6 @@
+## v0.2.5
+- updating repo url
+
 ## v0.2.4
 - update metadata description
 

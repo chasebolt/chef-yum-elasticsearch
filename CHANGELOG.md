@@ -1,3 +1,6 @@
+## v0.2.6
+- updating source_url and gems
+
 ## v0.2.5
 - updating repo url
 

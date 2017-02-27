@@ -1,3 +1,6 @@
+## v0.2.7
+- updating to latest elastisearch version
+
 ## v0.2.6
 - updating source_url and gems
 

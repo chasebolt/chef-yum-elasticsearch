@@ -3,7 +3,6 @@ default['yum']['elasticsearch']['baseurl'] = 'https://artifacts.elastic.co/packa
 default['yum']['elasticsearch']['gpgkey'] = 'https://artifacts.elastic.co/GPG-KEY-elasticsearch'
 default['yum']['elasticsearch']['gpgcheck'] = true
 default['yum']['elasticsearch']['enabled'] = true
-default['yum']['elasticsearch']['type'] = 'rpm-md'
 default['yum']['elasticsearch']['managed'] = true
 
 default['yum']['elasticsearch-curator']['description'] = 'Curator Repository'

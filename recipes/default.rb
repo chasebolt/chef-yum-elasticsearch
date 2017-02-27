@@ -16,16 +16,11 @@
 
 %w(
   elasticsearch
-  elasticsearch-beats
-  elasticsearch-logstash
   elasticsearch-curator
 ).each do |repo|
   yum_repository repo do
-    next unless node['yum'][repo]['managed']
     node['yum'][repo].each do |config, value|
-      next if config == 'managed'
-      send(config.to_sym, value) unless value.nil?
+      send(config.to_sym, value) unless value.nil? || config == 'managed'
     end
-    action :create
-  end
+  end if node['yum'][repo]['managed']
 end

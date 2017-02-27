@@ -1,3 +1,6 @@
+## v0.2.8
+- type is not needed and yum resource throws an error
+
 ## v0.2.7
 - updating to latest elastisearch version
 

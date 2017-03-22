@@ -1,3 +1,6 @@
+## v0.2.9
+- releasever requires centos-release pkg, removing this dependency.
+
 ## v0.2.8
 - type is not needed and yum resource throws an error
 

@@ -3,7 +3,7 @@ maintainer 'Chase Bolt'
 maintainer_email 'chase.bolt@gmail.com'
 license 'Apache 2.0'
 description 'Installs and configures the Elasticsearch yum repository'
-version '0.2.8'
+version '0.2.9'
 
 source_url 'https://github.com/chasebolt/chef-yum-elasticsearch'
 issues_url 'https://github.com/chasebolt/chef-yum-elasticsearch/issues'

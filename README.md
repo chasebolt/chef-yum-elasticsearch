@@ -36,7 +36,7 @@ default['yum']['elasticsearch-logstash']['enabled'] = true
 default['yum']['elasticsearch-logstash']['managed'] = true
 
 default['yum']['elasticsearch-curator']['description'] = 'Curator Repository'
-default['yum']['elasticsearch-curator']['baseurl'] = 'http://packages.elastic.co/curator/3/centos/$releasever'
+default['yum']['elasticsearch-curator']['baseurl'] = "http://packages.elastic.co/curator/3/centos/#{node['platform_version'].to_i}"
 default['yum']['elasticsearch-curator']['gpgkey'] = 'http://packages.elastic.co/GPG-KEY-elasticsearch'
 default['yum']['elasticsearch-curator']['gpgcheck'] = true
 default['yum']['elasticsearch-curator']['enabled'] = true
